@@ -1,0 +1,24 @@
+import javax.swing.JOptionPane;
+
+public class Ejercicio {
+    public static void main(String[] args){
+        double salarioF=0;
+
+        String empleadosStr = JOptionPane.showInputDialog("Cuantos empleados desea registrar:");
+        int empleados = Integer.parseInt(empleadosStr);
+
+        for(int i=1;i<=empleados;i++){
+            String salariosStr = (JOptionPane.showInputDialog("Ingrese el salario: "));
+            int salarios = Integer.parseInt(salariosStr);
+            Double SEM = salarios*0.0925;
+            Double IVM = salarios*0.0508;
+
+            salarioF+= SEM+IVM;
+            
+                       
+        }
+        JOptionPane.showMessageDialog(null,"Total de empleados"+ empleados+ "El salario es"+ salarioF);
+
+    }
+
+}
